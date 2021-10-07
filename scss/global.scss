@@ -10,7 +10,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-main{
+main {
   padding: 0 50px 0 50px;
 }
 
@@ -27,7 +27,6 @@ header {
   display: flex;
   justify-content: center;
   margin-top: 50px;
-  //padding: 0 50px 0 50px;
 }
 
 input {
@@ -106,6 +105,7 @@ input {
 }
 
 .filter-button {
+  margin-bottom:20px;
   padding: 15px;
   margin-right: 20px;
   color: white;
@@ -134,13 +134,16 @@ input {
   header img {
     width: 220px;
   }
-  .searchButton{
-    height:50px;
+  .searchButton {
+    height: 50px;
   }
   input {
     height: 50px;
   }
   button {
     height: 50px;
+  }
+  main {
+    padding: 0 10px 0 10px;
   }
 }
