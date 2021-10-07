@@ -6,7 +6,12 @@
   padding: 0;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 header {
+  padding: 20px;
   display: flex;
   justify-content: center;
 }
@@ -42,6 +47,54 @@ button {
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 20px;
+}
+
+.recipes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  border-radius: 5px;
+  width: 300px;
+  background-color: #e7e7e7;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 360px;
+}
+.recipe-card img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.title i {
+  margin-right: 5px;
+}
+
+.description {
+  display: flex;
+}
+
+.ingredients p {
+  display: flex;
+  font-size: 11px;
+}
+
+.recipe-description {
+  font-size: 11px;
+  width: 50%;
 }
 
 @media screen and (max-width: 576px) {
