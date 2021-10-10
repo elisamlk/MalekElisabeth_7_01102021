@@ -55,7 +55,7 @@ input {
 .recipes-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .recipe-card {
@@ -101,11 +101,13 @@ input {
 }
 
 .filters {
+  display: flex;
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 
 .filter-button {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 15px;
   margin-right: 20px;
   color: white;
@@ -130,6 +132,20 @@ input {
   background-color: #ed6454;
 }
 
+.ingredients-list {
+  background-color: #3282f7;
+  border-radius: 5px;
+  margin-top: -5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.ingredients-list p {
+  width: 200px;
+  color: white;
+  padding: 15px;
+}
+
 @media screen and (max-width: 576px) {
   header img {
     width: 220px;
@@ -149,6 +165,11 @@ input {
 
   main {
     padding: 0 10px 0 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .recipes-list {
+    justify-content: space-evenly;
   }
 }
 

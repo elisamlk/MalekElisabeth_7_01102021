@@ -8,6 +8,8 @@ export class Recipe {
     this.description = recipes.description;
     this.appliance = recipes.appliance;
     this.ustensils = recipes.ustensils;
+    this.ingredient = recipes.ingredients.map((elt) => elt.ingredient);
+    // idem pour ustensils et appareil
   }
   createRecipeCard() {
     let recipesList = document.querySelector(".recipes-list");
@@ -33,4 +35,21 @@ export class Recipe {
       </div>
     </div>`;
   }
+
+  addIngredients() {
+    let ingredientsList = document.querySelector(".ingredients-list");
+    for (let i in this.ingredient) {
+      let allIngredients = this.ingredient[i];
+      ingredientsList.innerHTML += `<p>${allIngredients}</p>`;
+    }
+  }
 }
+
+
+// fermer filtres 
+// ouvrir filtres 
+
+// appareil
+//ustensils
+
+// classer par ordre alphabétique

@@ -1,5 +1,6 @@
 import { Recipe } from "./class/Recipe.js";
 
+
 function displayRecipes() {
   fetch("./data/recipes.json")
     .then((response) => response.json())
@@ -8,6 +9,7 @@ function displayRecipes() {
       console.log(recipes);
       for (let i in recipes) {
         new Recipe(recipes[i]).createRecipeCard();
+        new Recipe(recipes[i]).addIngredients();
       }
     });
 }
