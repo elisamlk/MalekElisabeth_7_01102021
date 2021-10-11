@@ -8,7 +8,7 @@ export class Recipe {
     this.description = recipes.description;
     this.appliance = recipes.appliance;
     this.ustensils = recipes.ustensils;
-    this.ingredient = recipes.ingredients.map((elt) => elt.ingredient);
+    this.ingredientList = recipes.ingredients.map((elt) => elt.ingredient);
     // idem pour ustensils et appareil
   }
   createRecipeCard() {
@@ -38,16 +38,29 @@ export class Recipe {
 
   addIngredients() {
     let ingredientsList = document.querySelector(".ingredients-list");
-    for (let i in this.ingredient) {
-      let allIngredients = this.ingredient[i];
+    for (let i in this.ingredientList) {
+      let allIngredients = this.ingredientList[i];
       ingredientsList.innerHTML += `<p>${allIngredients}</p>`;
     }
   }
+
+  addAppliances() {
+    let applianceList = document.querySelector(".appliance-list");
+    applianceList.innerHTML += `<p>${this.appliance}</p>`;
+  }
 }
 
+/*var arrTwo=["Hello 1 "," Hello 2 ","Hello 1 " , " Hello 2 ","Hello 1 again"]
 
-// fermer filtres 
-// ouvrir filtres 
+const filteredArray = arrTwo.filter(function(ele , pos){
+    return arrTwo.indexOf(ele) == pos;
+}) 
+
+console.log("The filtered array ",filteredArray);
+*/
+
+// fermer filtres
+// ouvrir filtres
 
 // appareil
 //ustensils

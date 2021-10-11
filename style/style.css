@@ -120,11 +120,13 @@ input {
   color: white;
 }
 
-.search-ingredients {
+.search-ingredients,
+.ingredients-list {
   background-color: #3282f7;
 }
 
-.search-appliance {
+.search-appliance,
+.appliance-list {
   background-color: #68d9a4;
 }
 
@@ -132,15 +134,16 @@ input {
   background-color: #ed6454;
 }
 
-.ingredients-list {
-  background-color: #3282f7;
+.ingredients-list,
+.appliance-list {
   border-radius: 5px;
   margin-top: -5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.ingredients-list p {
+.ingredients-list p,
+.appliance-list p {
   width: 200px;
   color: white;
   padding: 15px;
