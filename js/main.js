@@ -11,6 +11,7 @@ function displayRecipes() {
         new Recipe(recipes[i]).createRecipeCard();
         new Recipe(recipes[i]).addIngredients();
         new Recipe(recipes[i]).addAppliances();
+        new Recipe(recipes[i]).addUstensils();
       }
       
     });

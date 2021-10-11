@@ -130,12 +130,14 @@ input {
   background-color: #68d9a4;
 }
 
-.search-ustensils {
+.search-ustensils,
+.ustensils-list {
   background-color: #ed6454;
 }
 
 .ingredients-list,
-.appliance-list {
+.appliance-list,
+.ustensils-list {
   border-radius: 5px;
   margin-top: -5px;
   display: flex;
