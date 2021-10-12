@@ -126,7 +126,7 @@ input {
 }
 
 .search-appliance,
-.appliance-list {
+.appliances-list {
   background-color: $secondary-color;
 }
 
@@ -136,10 +136,9 @@ input {
 }
 
 .ingredients-list,
-.appliance-list,
+.appliances-list,
 .ustensils-list {
   border-radius: 5px;
-  margin-top: -5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -151,11 +150,9 @@ input {
   }
 }
 
-.is-open{
-  display:block;
+.is-open {
+  display: block;
 }
-
-
 
 @media screen and (max-width: 576px) {
   header img {

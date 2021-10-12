@@ -126,7 +126,7 @@ input {
 }
 
 .search-appliance,
-.appliance-list {
+.appliances-list {
   background-color: #68d9a4;
 }
 
@@ -136,17 +136,16 @@ input {
 }
 
 .ingredients-list,
-.appliance-list,
+.appliances-list,
 .ustensils-list {
   border-radius: 5px;
-  margin-top: -5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   display: none;
 }
 .ingredients-list p,
-.appliance-list p,
+.appliances-list p,
 .ustensils-list p {
   width: 200px;
   color: white;

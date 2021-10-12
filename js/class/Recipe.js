@@ -45,7 +45,7 @@ export class Recipe {
   }
 
   addAppliances() {
-    let applianceList = document.querySelector(".appliance-list");
+    let applianceList = document.querySelector(".appliances-list");
     applianceList.innerHTML += `<p>${this.appliance}</p>`;
   }
 
