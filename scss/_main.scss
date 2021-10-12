@@ -18,9 +18,9 @@ header {
   padding: 20px;
   display: flex;
   justify-content: center;
-}
-header img {
-  width: 400px;
+  img {
+    width: 400px;
+  }
 }
 
 .search-bar {
@@ -32,7 +32,7 @@ header img {
 input {
   width: 100%;
   border: none;
-  background: #e7e7e7e7;
+  background: $background-color;
   border-right: none;
   padding: 15px;
   height: 70px;
@@ -44,7 +44,7 @@ input {
   width: 40px;
   height: 70px;
   border: none;
-  background: #e7e7e7;
+  background: $background-color;
   text-align: center;
   color: black;
   border-radius: 0 5px 5px 0;
@@ -64,26 +64,26 @@ input {
   margin-top: 50px;
   border-radius: 5px;
   width: 300px;
-  background-color: #e7e7e7;
+  background-color: $background-color;
   overflow: hidden;
   text-overflow: ellipsis;
   height: 360px;
-}
-.recipe-card img {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
+  img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
 }
 
 .title {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-}
-.title i {
-  margin-right: 5px;
+  i {
+    margin-right: 5px;
+  }
 }
 
 .description {
@@ -114,25 +114,25 @@ input {
   border-radius: 5px;
   font-size: 18px;
   border: none;
-}
-.filter-button i {
-  margin-left: 15px;
-  color: white;
+  i {
+    margin-left: 15px;
+    color: white;
+  }
 }
 
 .search-ingredients,
 .ingredients-list {
-  background-color: #3282f7;
+  background-color: $primary-color;
 }
 
 .search-appliance,
 .appliance-list {
-  background-color: #68d9a4;
+  background-color: $secondary-color;
 }
 
 .search-ustensils,
 .ustensils-list {
-  background-color: #ed6454;
+  background-color: $third-color;
 }
 
 .ingredients-list,
@@ -144,40 +144,33 @@ input {
   flex-wrap: wrap;
   justify-content: space-around;
   display: none;
-}
-.ingredients-list p,
-.appliance-list p,
-.ustensils-list p {
-  width: 200px;
-  color: white;
-  padding: 15px;
+  p {
+    width: 200px;
+    color: white;
+    padding: 15px;
+  }
 }
 
 @media screen and (max-width: 576px) {
   header img {
     width: 220px;
   }
-
   .searchButton {
     height: 50px;
   }
-
   input {
     height: 50px;
   }
-
   button {
     height: 50px;
   }
-
   main {
     padding: 0 10px 0 10px;
   }
 }
+
 @media screen and (max-width: 768px) {
   .recipes-list {
     justify-content: space-evenly;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

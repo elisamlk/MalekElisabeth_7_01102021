@@ -20,3 +20,24 @@
 }
 */
 
+
+
+export function dropList() {
+  let chevronsDownIngredients = document.querySelector(".chevron-ingredients");
+  let dropDownIngredients = document.querySelector(".ingredients-list");
+  chevronsDownIngredients.addEventListener("click", function () {
+    let openList = chevronsDownIngredients.classList.toggle("is-open");
+    if (openList == true) {
+      dropDownIngredients.style.display = "block";
+      chevronsDownIngredients.style.display = "none";
+      let chevronUp = document.querySelector(".search-ingredients");
+      let replaceChevron =
+        (chevronUp.innerHTML += `<i class="fas fa-chevron-up"></i>`);
+    } else {
+      let chevronUpToHide = document.querySelector(".fas fa-chevron-up");
+      chevronUpToHide.addEventListener("click", function(){
+        console.log("hello");
+      })
+    }
+  });
+}

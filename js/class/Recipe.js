@@ -10,6 +10,7 @@ export class Recipe {
     this.ustensils = recipes.ustensils;
     this.ingredientList = recipes.ingredients.map((elt) => elt.ingredient);
   }
+
   createRecipeCard() {
     let recipesList = document.querySelector(".recipes-list");
     recipesList.innerHTML += `<div class="recipe-card">
@@ -56,10 +57,4 @@ export class Recipe {
   }
 }
 
-// fermer filtres
-// ouvrir filtres
 
-// appareil
-//ustensils
-
-// classer par ordre alphabétique

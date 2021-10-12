@@ -1,5 +1,5 @@
 import { Recipe } from "./class/Recipe.js";
-
+import { dropList } from "./modules/drop.js";
 
 function displayRecipes() {
   fetch("./data/recipes.json")
@@ -13,11 +13,8 @@ function displayRecipes() {
         new Recipe(recipes[i]).addAppliances();
         new Recipe(recipes[i]).addUstensils();
       }
-      
     });
+  dropList();
 }
 
 displayRecipes();
-
-
-
