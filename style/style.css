@@ -44,7 +44,7 @@ input {
   width: 40px;
   height: 70px;
   border: none;
-  background: #e7e7e7;
+  background: #e7e7e7e7;
   text-align: center;
   color: black;
   border-radius: 0 5px 5px 0;
@@ -64,7 +64,7 @@ input {
   margin-top: 50px;
   border-radius: 5px;
   width: 300px;
-  background-color: #e7e7e7;
+  background-color: #e7e7e7e7;
   overflow: hidden;
   text-overflow: ellipsis;
   height: 360px;
@@ -151,6 +151,10 @@ input {
   width: 200px;
   color: white;
   padding: 15px;
+}
+
+.is-open {
+  display: block;
 }
 
 @media screen and (max-width: 576px) {
