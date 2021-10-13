@@ -4,6 +4,11 @@
   flex-wrap: wrap;
 }
 
+.fa-chevron-up {
+  color: white;
+  margin-right: 10px;
+}
+
 .filter-button {
   margin-bottom: 30px;
   padding: 15px;
@@ -19,17 +24,23 @@
 }
 
 .search-ingredients,
-.ingredients-list {
+.ingredients-list,
+.ingredients-drop-down,
+.ingredients-searchTerm {
   background-color: $primary-color;
 }
 
-.search-appliance,
-.appliances-list {
+.search-appliances,
+.appliances-list,
+.appliances-drop-down,
+.appliances-searchTerm {
   background-color: $secondary-color;
 }
 
 .search-ustensils,
-.ustensils-list {
+.ustensils-list,
+.ustensils-drop-down,
+.ustensils-searchTerm {
   background-color: $third-color;
 }
 
@@ -37,6 +48,7 @@
 .appliances-list,
 .ustensils-list {
   border-radius: 5px;
+  margin-top: -10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -48,18 +60,34 @@
   }
 }
 
-.is-open {
+/*.is-open {
   display: flex;
   animation-name: openedlist;
   animation-duration: 1s;
 }
+*/
+
+.ingredients-drop-down,
+.appliances-drop-down,
+.ustensils-drop-down {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+
+.ingredients-drop-down,
+.appliances-drop-down,
+.ustensils-drop-down {
+  display: none;
+}
 
 @keyframes openedlist {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
+  to {
+    opacity: 1;
+  }
+}

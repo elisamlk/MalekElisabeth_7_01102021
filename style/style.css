@@ -132,6 +132,11 @@ input {
   flex-wrap: wrap;
 }
 
+.fa-chevron-up {
+  color: white;
+  margin-right: 10px;
+}
+
 .filter-button {
   margin-bottom: 30px;
   padding: 15px;
@@ -147,17 +152,23 @@ input {
 }
 
 .search-ingredients,
-.ingredients-list {
+.ingredients-list,
+.ingredients-drop-down,
+.ingredients-searchTerm {
   background-color: #3282f7;
 }
 
-.search-appliance,
-.appliances-list {
+.search-appliances,
+.appliances-list,
+.appliances-drop-down,
+.appliances-searchTerm {
   background-color: #68d9a4;
 }
 
 .search-ustensils,
-.ustensils-list {
+.ustensils-list,
+.ustensils-drop-down,
+.ustensils-searchTerm {
   background-color: #ed6454;
 }
 
@@ -165,6 +176,7 @@ input {
 .appliances-list,
 .ustensils-list {
   border-radius: 5px;
+  margin-top: -10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -178,10 +190,25 @@ input {
   padding: 15px;
 }
 
-.is-open {
+/*.is-open {
   display: flex;
   animation-name: openedlist;
   animation-duration: 1s;
+}
+*/
+.ingredients-drop-down,
+.appliances-drop-down,
+.ustensils-drop-down {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+
+.ingredients-drop-down,
+.appliances-drop-down,
+.ustensils-drop-down {
+  display: none;
 }
 
 @keyframes openedlist {

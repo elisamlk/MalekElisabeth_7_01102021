@@ -2,7 +2,8 @@ import { Recipe } from "./class/Recipe.js";
 import {
   dropIngredientsList,
   dropAppliancesList,
-  dropUstensilsList,
+  dropUstensilsList
+ 
 } from "./modules/drop.js";
 
 function displayRecipes() {
@@ -10,7 +11,7 @@ function displayRecipes() {
     .then((response) => response.json())
     .then((data) => {
       let recipes = data.recipes;
-      console.log(recipes);
+      //console.log(recipes);
       for (let i in recipes) {
         new Recipe(recipes[i]).createRecipeCard();
         new Recipe(recipes[i]).addIngredients();
@@ -21,6 +22,9 @@ function displayRecipes() {
   dropIngredientsList();
   dropAppliancesList();
   dropUstensilsList();
+ 
 }
 
 displayRecipes();
+
+
