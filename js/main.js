@@ -1,5 +1,9 @@
 import { Recipe } from "./class/Recipe.js";
-import { dropAppliancesList, dropIngredientsList } from "./modules/drop.js";
+import {
+  dropIngredientsList,
+  dropAppliancesList,
+  dropUstensilsList,
+} from "./modules/drop.js";
 
 function displayRecipes() {
   fetch("./data/recipes.json")
@@ -16,6 +20,7 @@ function displayRecipes() {
     });
   dropIngredientsList();
   dropAppliancesList();
+  dropUstensilsList();
 }
 
 displayRecipes();

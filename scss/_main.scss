@@ -100,60 +100,6 @@ input {
   width: 50%;
 }
 
-.filters {
-  display: flex;
-  margin-top: 50px;
-  flex-wrap: wrap;
-}
-
-.filter-button {
-  margin-bottom: 30px;
-  padding: 15px;
-  margin-right: 20px;
-  color: white;
-  border-radius: 5px;
-  font-size: 18px;
-  border: none;
-  i {
-    margin-left: 15px;
-    color: white;
-  }
-}
-
-.search-ingredients,
-.ingredients-list {
-  background-color: $primary-color;
-}
-
-.search-appliance,
-.appliances-list {
-  background-color: $secondary-color;
-}
-
-.search-ustensils,
-.ustensils-list {
-  background-color: $third-color;
-}
-
-.ingredients-list,
-.appliances-list,
-.ustensils-list {
-  border-radius: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  display: none;
-  p {
-    width: 200px;
-    color: white;
-    padding: 15px;
-  }
-}
-
-.is-open {
-  display: block;
-}
-
 @media screen and (max-width: 576px) {
   header img {
     width: 220px;

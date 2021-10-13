@@ -1,6 +1,5 @@
 export function dropIngredientsList() {
   let chevronIngredient = document.querySelector(".chevron-ingredients");
-  console.log(chevronIngredient);
   let ingredientsList = document.querySelector(".ingredients-list");
   chevronIngredient.addEventListener("click", function () {
     ingredientsList.classList.toggle("is-open");
@@ -15,4 +14,10 @@ export function dropAppliancesList() {
   });
 }
 
-//appareils
+export function dropUstensilsList() {
+  let chevronUstensil = document.querySelector(".chevron-ustensils");
+  let ustensilsList = document.querySelector(".ustensils-list");
+  chevronUstensil.addEventListener("click", function () {
+    ustensilsList.classList.toggle("is-open");
+  });
+}

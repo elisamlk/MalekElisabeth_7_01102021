@@ -100,6 +100,32 @@ input {
   width: 50%;
 }
 
+@media screen and (max-width: 576px) {
+  header img {
+    width: 220px;
+  }
+
+  .searchButton {
+    height: 50px;
+  }
+
+  input {
+    height: 50px;
+  }
+
+  button {
+    height: 50px;
+  }
+
+  main {
+    padding: 0 10px 0 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .recipes-list {
+    justify-content: space-evenly;
+  }
+}
 .filters {
   display: flex;
   margin-top: 50px;
@@ -153,33 +179,18 @@ input {
 }
 
 .is-open {
-  display: block;
+  display: flex;
+  animation-name: openedlist;
+  animation-duration: 1s;
 }
 
-@media screen and (max-width: 576px) {
-  header img {
-    width: 220px;
+@keyframes openedlist {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-
-  .searchButton {
-    height: 50px;
-  }
-
-  input {
-    height: 50px;
-  }
-
-  button {
-    height: 50px;
-  }
-
-  main {
-    padding: 0 10px 0 10px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .recipes-list {
-    justify-content: space-evenly;
+  to {
+    opacity: 1;
   }
 }
 
