@@ -13,10 +13,8 @@ function displayRecipes() {
       let recipes = data.recipes;
       //console.log(recipes);
       for (let i in recipes) {
-        new Recipe(recipes[i]).createRecipeCard();
-        new Recipe(recipes[i]).addIngredients();
-        new Recipe(recipes[i]).addAppliances();
-        new Recipe(recipes[i]).addUstensils();
+        let newRecipe = new Recipe(recipes[i]);
+        newRecipe.initHTML();
       }
     });
   dropIngredientsList();
@@ -26,5 +24,8 @@ function displayRecipes() {
 }
 
 displayRecipes();
+
+
+
 
 

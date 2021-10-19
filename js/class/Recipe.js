@@ -1,5 +1,6 @@
 export class Recipe {
   constructor(recipes) {
+    this.recipes = recipes;
     this.id = recipes.id;
     this.name = recipes.name;
     this.servings = recipes.servings;
@@ -9,6 +10,13 @@ export class Recipe {
     this.appliance = recipes.appliance;
     this.ustensils = recipes.ustensils;
     this.ingredientList = recipes.ingredients.map((elt) => elt.ingredient);
+  }
+
+  initHTML() {
+    this.createRecipeCard();
+    this.addIngredients();
+    this.addAppliances();
+    this.addUstensils();
   }
 
   createRecipeCard() {
