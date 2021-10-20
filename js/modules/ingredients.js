@@ -10,7 +10,6 @@ export function addIngredients(recipes) {
   let deleteDuplicates = new Set(ingredientsArray);
   let newIngredientsArray = [...deleteDuplicates];
   console.log(newIngredientsArray);
-
   for (let i in newIngredientsArray) {
     ingredientsList.innerHTML += `<p>${newIngredientsArray[i]}</p>`;
   }
