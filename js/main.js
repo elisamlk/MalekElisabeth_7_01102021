@@ -8,6 +8,7 @@ import { addIngredients } from "./modules/ingredients.js";
 import { createRecipeCard } from "./modules/recipes.js";
 import { addUstensils } from "./modules/ustensils.js";
 
+
 function displayRecipes() {
   fetch("./data/recipes.json")
     .then((response) => response.json())

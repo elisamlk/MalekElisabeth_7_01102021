@@ -9,7 +9,6 @@ export function addUstensils(recipes) {
   }
   let deleteDuplicates = new Set(ustensilsArray);
   let newUstensilsArray = [...deleteDuplicates];
-  console.log(newUstensilsArray);
   for (let i in newUstensilsArray) {
     ustensilsList.innerHTML += `<p>${newUstensilsArray[i]}</p>`;
   }
