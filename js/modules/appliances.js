@@ -8,6 +8,6 @@ export function addAppliances(recipes) {
   let deleteDuplicates = new Set(appliancesArray);
   let newApplianceArray = [...deleteDuplicates];
   for (let i in newApplianceArray) {
-    applianceList.innerHTML += `<p>${newApplianceArray[i]}</p>`;
+    applianceList.innerHTML += `<p class="appliance">${newApplianceArray[i]}</p>`;
   }
 }

@@ -26,21 +26,24 @@
 .search-ingredients,
 .ingredients-list,
 .ingredients-drop-down,
-.ingredients-searchTerm {
+.ingredients-searchTerm,
+.ingredient-tag {
   background-color: $primary-color;
 }
 
 .search-appliances,
 .appliances-list,
 .appliances-drop-down,
-.appliances-searchTerm {
+.appliances-searchTerm,
+.appliance-tag {
   background-color: $secondary-color;
 }
 
 .search-ustensils,
 .ustensils-list,
 .ustensils-drop-down,
-.ustensils-searchTerm {
+.ustensils-searchTerm,
+.ustensil-tag {
   background-color: $third-color;
 }
 
@@ -91,3 +94,25 @@
     opacity: 1;
   }
 }
+
+.tag-style {
+  i {
+    margin-left: 10px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 11px;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  margin:0 10px 10px 0;
+}
+
+.tags{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top:30px;
+}
+

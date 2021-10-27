@@ -154,21 +154,24 @@ input {
 .search-ingredients,
 .ingredients-list,
 .ingredients-drop-down,
-.ingredients-searchTerm {
+.ingredients-searchTerm,
+.ingredient-tag {
   background-color: #3282f7;
 }
 
 .search-appliances,
 .appliances-list,
 .appliances-drop-down,
-.appliances-searchTerm {
+.appliances-searchTerm,
+.appliance-tag {
   background-color: #68d9a4;
 }
 
 .search-ustensils,
 .ustensils-list,
 .ustensils-drop-down,
-.ustensils-searchTerm {
+.ustensils-searchTerm,
+.ustensil-tag {
   background-color: #ed6454;
 }
 
@@ -219,6 +222,26 @@ input {
   to {
     opacity: 1;
   }
+}
+.tag-style {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 11px;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 10px 10px 0;
+}
+.tag-style i {
+  margin-left: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
