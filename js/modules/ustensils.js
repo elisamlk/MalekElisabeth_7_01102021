@@ -7,8 +7,13 @@ export function addUstensils(recipes) {
       ustensilsArray.push(ustensils[i]);
     }
   }
+  // Supprimer les doublons de la liste
   let deleteDuplicates = new Set(ustensilsArray);
   let newUstensilsArray = [...deleteDuplicates];
+  // Trier par ordre alphabétique
+  newUstensilsArray.sort(function (a, b) {
+    return a.localeCompare(b);
+  });
   for (let i in newUstensilsArray) {
     ustensilsList.innerHTML += `<p class="ustensil">${newUstensilsArray[i]}</p>`;
   }
