@@ -15,6 +15,12 @@ export function addUstensils(recipes) {
     return a.localeCompare(b);
   });
   for (let i in newUstensilsArray) {
-    ustensilsList.innerHTML += `<p class="ustensil">${newUstensilsArray[i]}</p>`;
+    ustensilsList.innerHTML += `<p class="ustensil">${capitalize(
+      newUstensilsArray[i]
+    )}</p>`;
   }
+}
+
+function capitalize(sentence) {
+  return sentence && sentence[0].toUpperCase() + sentence.slice(1);
 }

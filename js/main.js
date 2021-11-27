@@ -18,7 +18,6 @@ function displayRecipes() {
       addUstensils(recipes);
       addIngredients(recipes);
     });
-
   dropIngredientsList();
   dropAppliancesList();
   dropUstensilsList();
