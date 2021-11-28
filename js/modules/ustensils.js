@@ -22,5 +22,5 @@ export function addUstensils(recipes) {
 }
 
 function capitalize(sentence) {
-  return sentence && sentence[0].toUpperCase() + sentence.slice(1);
+  return sentence && sentence[0].toUpperCase() + sentence.slice(1)
 }

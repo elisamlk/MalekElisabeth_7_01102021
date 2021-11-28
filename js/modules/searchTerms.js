@@ -91,11 +91,11 @@ function ustensilTagFilter(ustensilList, tagSection, elementMatch) {
 
 function filterSearch(ingredientList, applianceList, ustensilList) {
   let searchTermsFilter = document.querySelectorAll(".filter-searchTerm");
-  console.log(searchTermsFilter)
+  console.log(searchTermsFilter);
   searchTermsFilter.forEach((searchTermFilter) => {
     searchTermFilter.addEventListener("keyup", function () {
       let filterValue = searchTermFilter.value;
-      console.log(filterValue)
+      console.log(filterValue);
       if (filterValue.length > 2) {
         ingredientList.forEach((ingredient) => {
           if (ingredient.innerText.indexOf(filterValue) !== -1) {
@@ -122,3 +122,4 @@ function filterSearch(ingredientList, applianceList, ustensilList) {
     });
   });
 }
+
