@@ -6,6 +6,7 @@ import {
 } from "./modules/drop.js";
 import { addIngredients } from "./modules/ingredients.js";
 import { createRecipeCard } from "./modules/recipes.js";
+import { searchTerms } from "./modules/searchTerms.js";
 import { addUstensils } from "./modules/ustensils.js";
 
 function displayRecipes() {
@@ -17,6 +18,7 @@ function displayRecipes() {
       addAppliances(recipes);
       addUstensils(recipes);
       addIngredients(recipes);
+      searchTerms();
     });
   dropIngredientsList();
   dropAppliancesList();
