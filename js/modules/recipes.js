@@ -1,7 +1,13 @@
 export function createRecipeCard(recipes) {
-    for (let i in recipes) {
-      let recipesList = document.querySelector(".recipes-list");
-      recipesList.innerHTML += `<div class="recipe-card">
+  for (let i in recipes) {
+    let recipesList = document.querySelector(".recipes-list");
+    recipesList.innerHTML += `<div class="recipe-card" data-filter-ingredients="${recipes[
+      i
+    ].ingredients.map((elt) => elt.ingredient)}" data-filter-appliances="${
+      recipes[i].appliance
+    }" data-filter-ustensils="${recipes[i].ustensils}" data-filter-name="${
+      recipes[i].name
+    }">
               <img src="https://res.cloudinary.com/dlpyn3wxf/image/upload/v1619104039/img-recipes_tqi94t.png">
               <div class="card-body">
                 <div class="title">
@@ -22,6 +28,7 @@ export function createRecipeCard(recipes) {
                 </div>
               </div>
             </div>`;
-    }
   }
+}
+
   
