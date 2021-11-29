@@ -1,3 +1,5 @@
+import { recipeFilter } from "../algo_1/algo_1.js";
+
 export function searchTerms() {
   let elementMatch = [];
   let tagSection = document.querySelector(".tags");
@@ -17,6 +19,7 @@ function mainSearchBar(elementMatch) {
     let searchValue = searchTerm.value;
     if (searchValue.length > 2) {
       elementMatch.push(searchValue);
+      recipeFilter(elementMatch);
       console.log(elementMatch);
     } else {
       ("");
@@ -42,6 +45,7 @@ function ingredientTagFilter(ingredientList, tagSection, elementMatch) {
         elementMatch.pop(ingredientElement);
         console.log(elementMatch);
       });
+      recipeFilter(elementMatch);
     });
   });
 }
@@ -64,6 +68,7 @@ function applianceTagFilter(applianceList, tagSection, elementMatch) {
         elementMatch.pop(applianceElement);
         console.log(elementMatch);
       });
+      recipeFilter(elementMatch);
     });
   });
 }
@@ -85,6 +90,7 @@ function ustensilTagFilter(ustensilList, tagSection, elementMatch) {
         elementMatch.pop(ustensilElement);
         console.log(elementMatch);
       });
+      recipeFilter(elementMatch);
     });
   });
 }
@@ -122,4 +128,3 @@ function filterSearch(ingredientList, applianceList, ustensilList) {
     });
   });
 }
-
