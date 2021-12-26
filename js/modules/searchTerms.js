@@ -1,3 +1,5 @@
+import { recipeFilter } from "../algo_2/algo_2.js";
+
 export function searchTerms() {
   let elementMatch = [];
   let tagSection = document.querySelector(".tags");
@@ -36,12 +38,17 @@ function ingredientTagFilter(ingredientList, tagSection, elementMatch) {
       tagSection.appendChild(ingredientElement);
       ingredientElement.appendChild(closeElement);
       elementMatch.push(ingredientTag);
-      console.log(elementMatch);
       closeElement.addEventListener("click", function () {
         ingredientElement.style.display = "none";
-        elementMatch.pop(ingredientElement);
+        let ingToDelete = ingredientElement.textContent;
+        for (let i = 0; i < elementMatch.length; i++) {
+          if (elementMatch[i] === ingToDelete) {
+            elementMatch.splice(i, 1);
+          }
+        }
         console.log(elementMatch);
       });
+      recipeFilter(elementMatch);
     });
   });
 }
@@ -61,7 +68,12 @@ function applianceTagFilter(applianceList, tagSection, elementMatch) {
       console.log(elementMatch);
       closeElement.addEventListener("click", function () {
         applianceElement.style.display = "none";
-        elementMatch.pop(applianceElement);
+        let appToDelete = applianceElement.textContent;
+        for (let i = 0; i < elementMatch.length; i++) {
+          if (elementMatch[i] === appToDelete) {
+            elementMatch.splice(i, 1);
+          }
+        }
         console.log(elementMatch);
       });
     });
@@ -80,9 +92,15 @@ function ustensilTagFilter(ustensilList, tagSection, elementMatch) {
       tagSection.appendChild(ustensilElement);
       ustensilElement.appendChild(closeElement);
       elementMatch.push(ustensilTag);
+      console.log(elementMatch);
       closeElement.addEventListener("click", function () {
         ustensilElement.style.display = "none";
-        elementMatch.pop(ustensilElement);
+        let ustToDelete = ustensilElement.textContent;
+        for (let i = 0; i < elementMatch.length; i++) {
+          if (elementMatch[i] === ustToDelete) {
+            elementMatch.splice(i, 1);
+          }
+        }
         console.log(elementMatch);
       });
     });
@@ -91,7 +109,6 @@ function ustensilTagFilter(ustensilList, tagSection, elementMatch) {
 
 function filterSearch(ingredientList, applianceList, ustensilList) {
   let searchTermsFilter = document.querySelectorAll(".filter-searchTerm");
-  console.log(searchTermsFilter);
   searchTermsFilter.forEach((searchTermFilter) => {
     searchTermFilter.addEventListener("keyup", function () {
       let filterValue = searchTermFilter.value;
@@ -122,4 +139,3 @@ function filterSearch(ingredientList, applianceList, ustensilList) {
     });
   });
 }
-
