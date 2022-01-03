@@ -19,7 +19,6 @@ function mainSearchBar(elementMatch) {
     let searchValue = searchTerm.value;
     if (searchValue.length > 2) {
       elementMatch.push(searchValue);
-      console.log(elementMatch);
     } else {
       ("");
     }
@@ -46,7 +45,6 @@ function ingredientTagFilter(ingredientList, tagSection, elementMatch) {
             elementMatch.splice(i, 1);
           }
         }
-        console.log(elementMatch);
       });
       recipeFilter(elementMatch);
     });
@@ -74,8 +72,8 @@ function applianceTagFilter(applianceList, tagSection, elementMatch) {
             elementMatch.splice(i, 1);
           }
         }
-        console.log(elementMatch);
       });
+      recipeFilter(elementMatch);
     });
   });
 }
@@ -101,8 +99,8 @@ function ustensilTagFilter(ustensilList, tagSection, elementMatch) {
             elementMatch.splice(i, 1);
           }
         }
-        console.log(elementMatch);
       });
+      recipeFilter(elementMatch);
     });
   });
 }

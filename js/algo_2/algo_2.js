@@ -12,7 +12,6 @@ export function recipeFilter(elementMatch) {
         .concat(ustensilsData.split(","))
         .concat(appliancesData)
     );
-    console.log(allData);
     recipeCard.style.display = "block";
     for (let i in allData) {
       for (let e in elementMatch) {
