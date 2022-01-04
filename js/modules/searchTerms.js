@@ -19,6 +19,7 @@ function mainSearchBar(elementMatch) {
     let searchValue = searchTerm.value;
     if (searchValue.length > 2) {
       elementMatch.push(searchValue);
+      recipeFilter(elementMatch);
     } else {
       ("");
     }
