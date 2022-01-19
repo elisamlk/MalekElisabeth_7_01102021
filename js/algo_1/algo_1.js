@@ -1,7 +1,5 @@
 export function recipeFilter(elementMatch) {
-  console.log(elementMatch);
   let recipeCards = document.querySelectorAll(".recipe-card");
-  console.log(recipeCards);
   recipeCards.forEach((recipeCard) => {
     let allData = [];
     let ingredientsData = recipeCard.dataset.filterIngredients;
@@ -19,8 +17,6 @@ export function recipeFilter(elementMatch) {
     for (let i in elementMatch) {
       if (allDataString.includes(elementMatch[i]) != true) {
         recipeCard.style.display = "none";
-      } else if (elementMatch === []) {
-        console.log("vrai");
       }
     }
   });
