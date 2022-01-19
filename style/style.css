@@ -140,7 +140,8 @@ input {
 .filter-button {
   margin-bottom: 30px;
   padding: 15px;
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
   color: white;
   border-radius: 5px;
   font-size: 18px;
