@@ -1,6 +1,5 @@
-import { recipeFilter } from "../algo_1/algo_1.js";
+import { recipeFilter } from "../algo_2/algo_2.js";
 import { capitalize } from "./utils.js";
-
 
 export function searchTerms() {
   let elementMatch = [];
@@ -22,7 +21,6 @@ function mainSearchBar(elementMatch) {
     if (searchValue.length > 2) {
       elementMatch.push(searchValue);
       recipeFilter(elementMatch);
-      console.log(elementMatch);
     } else {
       ("");
     }
@@ -41,11 +39,14 @@ function ingredientTagFilter(ingredientList, tagSection, elementMatch) {
       tagSection.appendChild(ingredientElement);
       ingredientElement.appendChild(closeElement);
       elementMatch.push(ingredientTag);
-      console.log(elementMatch);
       closeElement.addEventListener("click", function () {
         ingredientElement.style.display = "none";
-        elementMatch.pop(ingredientElement);
-        console.log(elementMatch);
+        let ingToDelete = ingredientElement.textContent;
+        for (let i = 0; i < elementMatch.length; i++) {
+          if (elementMatch[i] === ingToDelete) {
+            elementMatch.splice(i, 1);
+          }
+        }
       });
       recipeFilter(elementMatch);
     });
@@ -64,11 +65,14 @@ function applianceTagFilter(applianceList, tagSection, elementMatch) {
       tagSection.appendChild(applianceElement);
       applianceElement.appendChild(closeElement);
       elementMatch.push(applianceTag);
-      console.log(elementMatch);
       closeElement.addEventListener("click", function () {
         applianceElement.style.display = "none";
-        elementMatch.pop(applianceElement);
-        console.log(elementMatch);
+        let appToDelete = applianceElement.textContent;
+        for (let i = 0; i < elementMatch.length; i++) {
+          if (elementMatch[i] === appToDelete) {
+            elementMatch.splice(i, 1);
+          }
+        }
       });
       recipeFilter(elementMatch);
     });
@@ -89,8 +93,12 @@ function ustensilTagFilter(ustensilList, tagSection, elementMatch) {
       elementMatch.push(ustensilTag);
       closeElement.addEventListener("click", function () {
         ustensilElement.style.display = "none";
-        elementMatch.pop(ustensilElement);
-        console.log(elementMatch);
+        let ustToDelete = ustensilElement.textContent;
+        for (let i = 0; i < elementMatch.length; i++) {
+          if (elementMatch[i] === ustToDelete) {
+            elementMatch.splice(i, 1);
+          }
+        }
       });
       recipeFilter(elementMatch);
     });
@@ -99,11 +107,9 @@ function ustensilTagFilter(ustensilList, tagSection, elementMatch) {
 
 function filterSearch(ingredientList, applianceList, ustensilList) {
   let searchTermsFilter = document.querySelectorAll(".filter-searchTerm");
-  console.log(searchTermsFilter);
   searchTermsFilter.forEach((searchTermFilter) => {
     searchTermFilter.addEventListener("keyup", function () {
-      let filterValue = searchTermFilter.value;
-      console.log(filterValue);
+      let filterValue = capitalize(searchTermFilter.value);
       if (filterValue.length > 2) {
         ingredientList.forEach((ingredient) => {
           if (ingredient.innerText.indexOf(filterValue) !== -1) {
