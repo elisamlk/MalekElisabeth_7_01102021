@@ -1,4 +1,5 @@
 import { recipeFilter } from "../algo_2/algo_2.js";
+import { capitalize } from "./utils.js";
 
 export function searchTerms() {
   let elementMatch = [];
@@ -16,7 +17,7 @@ export function searchTerms() {
 function mainSearchBar(elementMatch) {
   let searchTerm = document.querySelector(".searchTerm");
   searchTerm.addEventListener("keyup", function () {
-    let searchValue = searchTerm.value;
+    let searchValue = capitalize(searchTerm.value);
     if (searchValue.length > 2) {
       elementMatch.push(searchValue);
       recipeFilter(elementMatch);
@@ -64,7 +65,6 @@ function applianceTagFilter(applianceList, tagSection, elementMatch) {
       tagSection.appendChild(applianceElement);
       applianceElement.appendChild(closeElement);
       elementMatch.push(applianceTag);
-      console.log(elementMatch);
       closeElement.addEventListener("click", function () {
         applianceElement.style.display = "none";
         let appToDelete = applianceElement.textContent;
@@ -91,7 +91,6 @@ function ustensilTagFilter(ustensilList, tagSection, elementMatch) {
       tagSection.appendChild(ustensilElement);
       ustensilElement.appendChild(closeElement);
       elementMatch.push(ustensilTag);
-      console.log(elementMatch);
       closeElement.addEventListener("click", function () {
         ustensilElement.style.display = "none";
         let ustToDelete = ustensilElement.textContent;
@@ -110,8 +109,7 @@ function filterSearch(ingredientList, applianceList, ustensilList) {
   let searchTermsFilter = document.querySelectorAll(".filter-searchTerm");
   searchTermsFilter.forEach((searchTermFilter) => {
     searchTermFilter.addEventListener("keyup", function () {
-      let filterValue = searchTermFilter.value;
-      console.log(filterValue);
+      let filterValue = capitalize(searchTermFilter.value);
       if (filterValue.length > 2) {
         ingredientList.forEach((ingredient) => {
           if (ingredient.innerText.indexOf(filterValue) !== -1) {

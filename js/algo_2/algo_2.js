@@ -22,5 +22,3 @@ export function recipeFilter(elementMatch) {
     });
   });
 }
-
-
