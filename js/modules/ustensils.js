@@ -1,3 +1,5 @@
+import { capitalize } from "./utils.js";
+
 export function addUstensils(recipes) {
   let ustensilsList = document.querySelector(".ustensils-list");
   let ustensilsArray = [];
@@ -21,6 +23,4 @@ export function addUstensils(recipes) {
   }
 }
 
-function capitalize(sentence) {
-  return sentence && sentence[0].toUpperCase() + sentence.slice(1)
-}
+

@@ -4,7 +4,6 @@ export function recipeFilter(elementMatch) {
   console.log(recipeCards);
   recipeCards.forEach((recipeCard) => {
     let allData = [];
-    console.log(allData);
     let ingredientsData = recipeCard.dataset.filterIngredients;
     let ustensilsData = recipeCard.dataset.filterUstensils;
     let appliancesData = recipeCard.dataset.filterAppliances;
@@ -16,12 +15,12 @@ export function recipeFilter(elementMatch) {
       recipeName
     );
     let allDataString = allData.toString();
-    console.log(allDataString);
-    console.log(allDataString.includes(elementMatch));
     recipeCard.style.display = "block";
     for (let i in elementMatch) {
       if (allDataString.includes(elementMatch[i]) != true) {
         recipeCard.style.display = "none";
+      } else if (elementMatch === []) {
+        console.log("vrai");
       }
     }
   });

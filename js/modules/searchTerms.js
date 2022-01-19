@@ -1,4 +1,6 @@
 import { recipeFilter } from "../algo_1/algo_1.js";
+import { capitalize } from "./utils.js";
+
 
 export function searchTerms() {
   let elementMatch = [];
@@ -16,7 +18,7 @@ export function searchTerms() {
 function mainSearchBar(elementMatch) {
   let searchTerm = document.querySelector(".searchTerm");
   searchTerm.addEventListener("keyup", function () {
-    let searchValue = searchTerm.value;
+    let searchValue = capitalize(searchTerm.value);
     if (searchValue.length > 2) {
       elementMatch.push(searchValue);
       recipeFilter(elementMatch);
