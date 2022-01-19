@@ -1,4 +1,4 @@
-import { recipeFilter } from "../algo_2/algo_2.js";
+import { recipeFilter } from "../algo_1/algo_1.js";
 import { capitalize } from "./utils.js";
 
 export function searchTerms() {
